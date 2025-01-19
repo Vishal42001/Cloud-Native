@@ -1,55 +1,77 @@
-This project is a simple Flask web application that monitors system health by displaying the current CPU and memory utilization. If either the CPU or memory usage exceeds 80%, a warning message will be shown on the homepage, advising the user to scale up the system resources.
+# 🖥️ System Health Monitor
 
-🚀 Features
-Real-time monitoring of CPU and memory usage.
-Displays CPU and memory usage percentage.
-Alerts the user if usage exceeds 80% with a warning message.
-Built using Flask, with integration of the psutil library for system performance metrics.
-📋 System Requirements
-Python 3.11+ environment.
-Docker (optional, for containerized deployment).
-🛠 Installation
-Local Installation
-Clone the repository to your local machine:
+A simple **Flask web application** that monitors system health by displaying real-time CPU and memory utilization. The app warns users if resource usage exceeds 80%, suggesting the need to scale up system resources.
 
-bash
-Copy
+---
+
+## 🚀 Features
+- 🔄 **Real-Time Monitoring**:
+  - Tracks CPU and memory usage percentage.
+- ⚠️ **Warning Alerts**:
+  - Displays a warning message on the homepage if usage exceeds 80%.
+- 🛠 **Built With**:
+  - Flask: For the web application framework.
+  - psutil: For gathering system performance metrics.
+
+---
+
+## 📋 System Requirements
+- **Python** 3.11+
+- **Docker** (Optional, for containerized deployment)
+
+---
+
+## 🛠 Installation
+
+### 1️⃣ Local Installation
+
+#### Clone the Repository
+```bash
 git clone https://github.com/Vishal42001/HealthMonitor_Docker_app.git
 cd system-health-monitor
-Create a virtual environment (optional but recommended):
 
-bash
-Copy
+Create a Virtual Environment (Optional but Recommended)
 python3 -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-Install the required dependencies:
 
-bash
-Copy
+Install Dependencies
 pip install -r requirements.txt
-Run the application:
 
-bash
-Copy
+Run the Application
 flask run
-The application will be available at http://127.0.0.1:5000/.
 
+Open your browser and navigate to:
+http://127.0.0.1:5000
 
 📂 File Overview
 app.py: Main Python script for the Flask web application.
 Dockerfile: Instructions for building a Docker image for the app.
-requirements.txt: List of Python dependencies required for the project.
-templates/index.html: HTML template to display CPU and memory utilization and any alert message.
+requirements.txt: Python dependencies required for the project.
+templates/index.html: HTML template to display system health metrics and alert messages.
+
 🌐 Usage
-Once the application is running, open your browser and visit http://localhost:5000/. The system health metrics (CPU and memory usage) will be displayed. If either of the values exceeds 80%, a warning message will be shown, prompting the user to scale up resources.
+Open the application at http://localhost:5000/.
+View system health metrics:
+CPU usage (%)
+Memory usage (%)
+If either metric exceeds 80%, a warning message will be displayed, advising the user to scale up resources.
 
 🐳 Docker Deployment
-If you prefer to run the app in a Docker container, follow the Docker Installation instructions provided above. The Dockerfile is already configured to handle all necessary steps to build and run the app in a containerized environment.
+Prefer a containerized solution? Follow these steps:
+
+1.Build the Docker Image:
+docker build -t system-health-monitor .
+2.Run the Docker Container:
+docker run -p 5000:5000 system-health-monitor
+3.Access the application at http://localhost:5000.
 
 🙏 Acknowledgments
-psutil: A great library for retrieving system information in Python.
-Flask: A lightweight and simple-to-use web framework for Python.
+psutil: For providing an easy way to retrieve system performance metrics in Python.
+Flask: A lightweight and simple-to-use web framework for building web applications.
 
+📬 Contact
+For questions or feedback, feel free to reach out:
 
-
+Vishal Kumar Singh
+📧 Email:k.vishal42001@gmail.com
 
