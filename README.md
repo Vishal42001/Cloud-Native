@@ -14,7 +14,7 @@ Clone the repository to your local machine:
 
 bash
 Copy
-git clone https://github.com/Vishal42001/system-health-monitor.git
+git clone https://github.com/Vishal42001/Cloud-Native.git
 cd system-health-monitor
 Create a virtual environment (optional but recommended):
 
